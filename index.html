@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="header.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo" 
+      data-aos="fade-down-right"
+      data-aos-delay="200"
+      data-aos-duration="700"
+      >KAIZUKI</div>
+      <ul data-aos="fade-down-right"
+      data-aos-delay="200"
+      data-aos-duration="700">
+        <li>Home</li>
+        <li>News</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="banner" style="background-image: url('./front/space-soldier-ai-wallpaper-4k.png');">
+      <div class="glass-wrapper" 
+      data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="700"></div>
+    </div>
+  </div>
+  <div class="hero-title">
+    <p data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="700">Artificial</p>
+    <p class="country" data-aos="fade-up-right" data-aos-delay="400" data-aos-duration="800">Philippines</p>
+    <div class="details" 
+    data-aos="fade-left"
+    data-aos-delay="500" 
+    data-aos-duration="700">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Saepe cupiditate blanditiis alias culpa, assumenda dolore ab 
+      eligendi dicta, maiores molestias quod odit qui magnam asperiores
+      dolores animi repellendus amet natus.
+    </div>
+    <div class="explore" 
+    data-aos="fade-left"
+    data-aos-delay="800" 
+    data-aos-duration="700">
+      <button>explore</button>
+    </div>
+  </div>
+  <div class="tourist-list">
+    <ul class="place-list">
+      <li class="active" 
+      data-img ="./thumbnail/starfield-space-chromebook-wallpaper.jpg"
+      data-aos="fade-up"
+      data-aos-duration="2000">
+        <div class="thumbnail" 
+        style="background: url('./thumbnail/starfield-space-chromebook-wallpaper.jpg');"
+        >
+          <div class="details">
+            <p class="province">Arvin</p>
+            <p class="place-name">Hyperion</p>
+          </div>
+        </div>
+      </li>
+
+      <li data-img ="./thumbnail/astronaut-01-chromebook-wallpaper.jpg"
+      data-aos="fade-up"
+      data-aos-duration="2000">
+        <div class="thumbnail" 
+        style="background: url('./thumbnail/astronaut-01-chromebook-wallpaper.jpg');"
+        >
+          <div class="details">
+            <p class="province">Kent</p>
+            <p class="place-name">Hephaestus</p>
+          </div>
+        </div>
+      </li>
+
+      <li data-img ="./thumbnail/neon-astronaut-b0rpn8v5s8e791vh.jpg"
+      data-aos="fade-up"
+      data-aos-duration="2000">
+        <div class="thumbnail" 
+        style="background: url('./thumbnail/neon-astronaut-b0rpn8v5s8e791vh.jpg');"
+        >
+          <div class="details">
+            <p class="province">Cloud</p>
+            <p class="place-name">Intra</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+<style></style>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  let places = document.querySelectorAll('.place-list li')
+  let active = "/thumbnail/starfield-space-chromebook-wallpaper.jpg";
+
+  places.forEach((e) => {
+    e.addEventListener("mouseenter", (event) => {
+      places.forEach((e) => {
+        e.classList.remove("active");
+      });
+
+      event.target.classList.add("active");
+      active = event.target.getAttribute('data-img');
+      let banner = document.querySelector('.banner');
+      banner.style.backgroundImage =`url('${active}')`;
+    });
+  });
+</script>
+</html>

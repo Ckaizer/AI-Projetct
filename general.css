@@ -2,8 +2,20 @@
   margin: 0px;
   padding: 0px;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  color: #fff;
 }
 
 body{
-  padding-bottom: 1500px;
+  background-color: black;
+  color: white;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+
 }

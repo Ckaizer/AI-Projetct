@@ -1,32 +1,148 @@
 .header{
-  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0px auto;
   align-items: center;
+  z-index: 100;
+  
 }
 
-.header .logo{
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-  font-size: 25px;
-  color: #fff;
-}
-
-
-.header ul{
-  display: flex;
-  list-style: none;
-  gap: 8rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 300;
-  font-size: 16px;
-  color: #fff;
+.logo{
+  font-size: 1.7rem;
+  color: #970a58;
+  text-decoration: none;
+  font-weight: 700;
   cursor: pointer;
+
 }
+
+.navbar a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 7px;
+  margin-left: 4rem;
+  font-size: 1.7rem;
+  transition: .2s;
+}
+
+.navbar a:hover, .navbar a:active{
+  background: #970a58;
+  color:#fff;
+}
+
+.all-heading{
+  display: flex;
+  font-size: 60px;
+  color: #970a58;
+  
+}
+
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.banner video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .banner video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#about{
+  background-image: url('./thumbnail/astronaut-surfing-nebula_777271-2178.avif');
+  background-image: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.container video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .contact-form video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#project{
+  background-color: black;
+}
+
+.contact{
+  background: #970a58;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  grid-gap: 6rem;
+}
+
+.contact-img img{
+  max-width: 100%;
+  width: 720px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-form h1{
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+span{
+  color: #970a58;
+}
+
+.contact-form p{
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+  margin-bottom: 3.8rem;
+}
+
 
 .banner{
   background-size: cover;
@@ -37,6 +153,101 @@
   z-index: -1;
   transition: 2s ease;
 }
+
+.contact-form form{
+  position: relative;
+}
+
+.contact-form form input,
+form textarea{
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background:#4b4b44;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+}
+
+.contact-form textarea{
+  resize: none;
+  height: 200px;
+}
+
+.contact-form form .btn{
+  display: inline-block;
+  background: #970a58;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 220px;
+  transition: ease .20s;
+  cursor: pointer;
+}
+
+.contact-form form .btn:hover{
+  border: 2px solid #970a58;
+  background: transparent;
+  transform: scale(1.1);
+  
+}
+
+@media (max-width: 1570px){
+  section{
+    padding: 80px 3%;
+    transition: .2s;
+  }
+  .contact-form h1{
+    font-size: 60px;
+  }
+  .contact-form form p{
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1090px){
+  .contact{
+    grid-gap: 2rem;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 1000px){
+  .contact{
+    grid-template-columns: 1fr;
+    transition: .3s;
+  }
+  .contact-form{
+    order: 2;
+  }
+  .contact-img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-form video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+  .contact-form video{
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 .banner .glass-wrapper{
   width: 30%;
@@ -141,7 +352,7 @@
   
 }
 
-.details .province{
+.details .name{
   font-weight: 300;
   
 }

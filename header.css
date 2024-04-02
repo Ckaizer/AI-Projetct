@@ -92,14 +92,6 @@ section{
   justify-content: space-between;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: #3498db;
-  margin: 10px;
-  border-radius: 5px;
-}
-
 .container video{
   position: absolute;
   right: 0;
@@ -517,3 +509,40 @@ form textarea{
   margin-right: 50px !important;
 }
 
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 100px;
+  transition: 1.5s;
+  font-size: 17px;
+}
+
+.box:hover{
+  width: 500px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+p.ex1 {
+  display: none;
+}
+
+.box:hover p.ex1 {
+  display: block;
+  padding: 10px;
+  transition-delay: 1s;
+}
+
+p.ex2 {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+}
+
+p.ex3 {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  font-size: 13px;
+}
